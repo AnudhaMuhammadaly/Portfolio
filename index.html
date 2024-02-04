@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>PTtask</title>
+   <link rel="stylesheet" href="./style.css">
+   <link rel="icon" type="image/png"
+      href="data:image/png;base64,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">
+</head>
+
+<body>
+   <nav>
+      <ul type="none">
+         <li><a href="#home">Home</a></li>
+         <li><a href="#about">About</a></li>
+         <li><a href="#family">Family </a></li>
+         <li><a href="#career">Career</a></li>
+         <li><a href="#achievements">Achievements</a></li>
+         <li><a href="#contact">Contact</a></li>
+      </ul>
+   </nav>
+   <section id="home">
+      <div id="one">
+         <img src="https://cloudfront-us-east-2.images.arcpublishing.com/reuters/ANYAEGQCHRMOPKPRV7ZKHFTMMM.jpg" alt="">
+         <div id="text">
+            <h1>SATYA NADELLA</h1>
+            <h3>MICROSOFT CEO</h3>
+
+         </div>
+   </section> <br>
+   <section id="about">
+      <div class="head">
+         <h2>About...</h2>
+         <p>Satya Nadella is Chairman and Chief Executive Officer of Microsoft. Before being named CEO in February 2014,
+            Nadella held leadership roles in both enterprise and consumer businesses across the company.Joining
+            Microsoft in 1992, he quickly became known as a leader who could span a breadth of technologies and
+            businesses to transform some of Microsoft’s biggest product offerings.
+            Most recently, Nadella was executive vice president of Microsoft’s Cloud and Enterprise group. In this role
+            he led the transformation to the cloud infrastructure and services business, which outperformed the market
+            and took share from competition. Previously, Nadella led R&D for the Online Services Division and was vice
+            president of the Microsoft Business Division. Before joining Microsoft, Nadella was a member of the
+            technology staff at Sun Microsystems.
+            Originally from Hyderabad, India, Nadella lives in Bellevue, Washington, with his family. He earned a
+            bachelor’s degree in electrical engineering from Mangalore University, a master’s degree in computer science
+            from the University of Wisconsin – Milwaukee and a master’s degree in business administration from the
+            University of Chicago. Nadella serves on the board of trustees to his alma mater the University of Chicago,
+            as well as the Starbucks board of directors. </p>
+
+         <a href="https://en.wikipedia.org/wiki/Satya_Nadella">Read More</a>
+
+      </div>
+
+   </section>
+   <br>
+
+   <section id="family">
+      <h2>Family...</h2>
+      <div class="fam">
+         <img
+            src="https://gumlet.assettype.com/tnm%2Fimport%2Fsites%2Fdefault%2Ffiles%2FSatya_Nadella_Childhood_1200.jpg?auto=format%2Ccompress&fit=max&w=1200"
+            alt="">
+         <img
+            src="https://m.economictimes.com/thumb/msid-89919321,width-1200,height-900,resizemode-4,imgsize-49670/zain-satya-nadella.jpg"
+            alt="">
+         <img
+            src="https://hips.hearstapps.com/ghk.h-cdn.co/assets/17/39/640x320/landscape-1506528711-microsoftindex.jpg?resize=640:*"
+            alt="">
+         <img
+            src="https://i0.wp.com/pulse.seattlechildrens.org/wp-content/uploads/4K1A8497-1.jpg?resize=700%2C467&ssl=1"
+            alt="">
+         <img src="https://hips.hearstapps.com/goodhousekeeping/assets/17/39/1506363241-ghk110117rlfeature05.jpg"
+            alt="">
+         <img src="https://c.ndtvimg.com/2020-06/1iulk17g_satya-nadela-and-father-linkedin_625x300_23_June_20.jpg"
+            alt="">
+         <a
+            href="https://www.google.com/search?q=satya+nadella+images+family&tbm=isch&ved=2ahUKEwi98arhubSBAxVgUWwGHRlhDKMQ2-cCegQIABAA&oq=satya+nadella+images+family&gs_lcp=CgNpbWcQAzoECCMQJzoFCAAQgAQ6BwgAEIoFEEM6BwgAEBgQgAQ6BAgAEB5QlANYlihgnitoAHAAeACAAWyIAd4KkgEEMTMuMpgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=hmkIZb2WB-CiseMPmcKxmAo&bih=739&biw=1165&hl=en">More
+            Images</a>
+      </div>
+
+   </section> <br>
+   <section id="career">
+      <h2>Career...</h2>
+      <div id="three">
+         <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Satya_Nadella%2C_CEO_of_Microsoft%2C_with_former_CEOs_Bill_Gates%2C_and_Steve_Ballmer.jpg/330px-Satya_Nadella%2C_CEO_of_Microsoft%2C_with_former_CEOs_Bill_Gates%2C_and_Steve_Ballmer.jpg"
+            alt="">
+         <ul type="square">
+            <li>Sun Microsystems:
+               Nadella worked at Sun Microsystems as a member of its technology staff before joining Microsoft in 1992.
+            </li>
+         </ul>
+         <div id="four">
+            <ul type="square">
+               <li>Microsoft:
+                  1992–2014:At Microsoft, Nadella has led major projects that included the company's move to cloud
+                  computing and the development of one of the largest cloud infrastructures in the world.</li>
+            </ul>
+            <div id="five">
+               <ul type="square">
+                  <li>Chief executive officer:2014–present:
+                     On 4 February 2014, Nadella was announced as the new CEO of Microsoft,the third CEO in the
+                     company's history, following Bill Gates and Steve Ballmer.</li>
+               </ul>
+            </div>
+            <a href="https://en.wikipedia.org/wiki/Satya_Nadella#Career">Read More</a>
+
+   </section> <br>
+
+   <section id="achievements">
+      <h2>Achievements...</h2> <br>
+      <div class="achv">
+
+
+         <div class="ach1">
+            <h1>1992</h1>
+
+            <p>Joined Microsoft</p>
+
+
+         </div> <br>
+
+         <div class="ach2">
+            <h1>1997</h1>
+
+            <p>Earned an MBA from the University of Chicago Booth School of Business</p>
+
+         </div> <br>
+
+         <div class="ach3">
+            <h1>2014</h1>
+
+            <p>Became CEO of Microsoft</p>
+
+         </div> <br>
+
+         <div class="ach4">
+            <h1>2015</h1>
+
+            <p>CNN-IBN Indian of the Year Award</p>
+
+         </div>
+         <br>
+
+
+         <div class="ach5">
+            <h1>2019</h1>
+
+            <p>Financial Times Person of the Year</p>
+
+         </div><br>
+
+         <div class="ach6">
+            <h1>2021</h1>
+
+            <p>Became the chairman of Microsoft-holds 8.4L Microsoft shares worth $220M</p>
+
+         </div> <br>
+
+         <div class="ach7">
+            <h1>2022</h1>
+
+            <p>Received the Padma Bhushan</p>
+
+         </div> <br>
+
+      </div>
+
+   </section> <br>
+   <section id="contact">
+      <h2>Contact Us☎️</h2>
+      <form>
+         <input class="input" type="text" placeholder="Enter Your Name">
+         <input class="input" type="text" placeholder="Enter Your Email">
+         <textarea class="input" placeholder="Enter Your Message" cols="30" rows="10"></textarea>
+         <button class="input">Submit</button>
+
+
+
+      </form>
+
+
+   </section>
+
+ <br>
+
+
+   <div class="cont">
+
+      <ul type="none">
+         <li><a href="https://www.facebook.com/people/Satya-Nadela-Microsoft/100063746169067/">Facebook</a></li>
+         <li><a href="https://www.instagram.com/satyanadella/">Instagram</a></li>
+         <li><a href="https://rocketreach.co/satya-nadella-email_95914476">Gmail</a></li>
+         <li><a
+               href="https://twitter.com/satyanadella?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Twitter</a>
+         </li>
+      </ul>
+
+
+
+
+
+
+
+
+   </div>
+
+   </footer>
+
+
+</body>
+
+</html>
